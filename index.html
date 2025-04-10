@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Seth Bernstein</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <a href="#">Home</a>
+            <a href="#about">About</a>
+            <a href="#research">Research</a>
+            <a href="#publications">Publications</a>
+            <a href="#service">Service</a>
+            <a href="assets/cv.pdf" target="_blank" rel="noopener noreferrer">CV</a>
+        </div>
+    </nav>
+
+    <div class="wrapper">
+
+        <header class="site-header">
+            <div class="intro">
+                <img src="assets/headshot.jpg" alt="Seth Bernstein" class="profile-pic" />
+                <div class="intro-text">
+                    <h1>Seth Bernstein</h1>
+                    <p>Incoming PhD Student, University of Michigan<br>School of Information</p>
+                    <p><strong>Research:</strong> HCI & Computing Education</p>
+                    <div class="social-links">
+                        <a href="mailto:sethbern@umich.edu"><i class="fas fa-envelope"></i> sethbern@umich.edu</a> |
+                        <a href="https://www.linkedin.com/in/seth-bern" target="_blank"><i class="fab fa-linkedin"></i>
+                            LinkedIn</a> |
+                        <a href="https://scholar.google.com/citations?user=mpn42u8AAAAJ&hl=en" target="_blank"><i
+                                class="fas fa-graduation-cap"></i> Google Scholar</a> |
+                        <a href="https://orcid.org/0000-0002-7552-5448" target="_blank"><i class="fab fa-orcid"></i>
+                            ORCID</a> |
+                        <a class="cv-link" href="assets/cv.pdf" target="_blank" rel="noopener noreferrer"><i
+                                class="fas fa-file-pdf"></i> View CV</a>
+                    </div>
+
+
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section id="about">
+                <h2>About</h2>
+                <p>
+                    I’m interested in making computing education more accessible and personally meaningful through
+                    Human-Computer Interaction (HCI) and AI. I’ve been drawn to computing since seventh grade and began
+                    researching as a freshman at Temple University, where I focused on how to help novice students
+                    understand
+                    programming concepts.
+                </p>
+                <p>
+                    My work explores how large language models (LLMs) can generate analogies, explanations, and learning
+                    materials that reflect students' interests and backgrounds. I am passionate about making computing
+                    more inclusive,
+                    especially for students who don’t yet see themselves represented in technical spaces.
+                </p>
+                <p>
+                    In 2025, I’ll begin my PhD at the <b>University of Michigan School of Information</b>, where I’ll
+                    continue
+                    designing systems that support the diverse ways people learn and engage with computing.
+                </p>
+            </section>
+
+            <section id="research">
+                <h2>Research</h2>
+                <p>
+                    My research focuses on using LLMs to personalize learning in computing education. I study how
+                    AI-generated
+                    explanations and analogies can be adapted to align with students’ interests, cultural backgrounds,
+                    and learning
+                    needs.
+                <p>
+                    I combine LLMs with perspectives from HCI to better understand how to support intrinsic motivation
+                    and deliver adaptive feedback.
+                    This includes building interactive tools, analyzing student responses, and evaluating how
+                    personalized
+                    support affects comprehension. I’m focused on making sure these systems help students learn, not
+                    replace or
+                    mislead them.
+                </p>
+            </section>
+
+
+
+            <section id="publications">
+                <h2>Publications</h2>
+                <div class="sort-buttons">
+                    Sort by:
+                    <button id="sort-year" onclick="sortPublications('year')">Year</button>
+                    <button id="sort-title" onclick="sortPublications('title')">Title</button>
+                </div>
+                <div id="pub-container">
+                    <div class="pub-card" data-year="2024"
+                        data-title="like a nesting doll: analyzing recursion analogies generated by cs students using large language models">
+                        <a class="pub-title" href="https://doi.org/10.1145/3649217.3653533" target="_blank">Like
+                            a
+                            Nesting Doll: Analyzing Recursion Analogies Generated by CS Students using Large
+                            Language
+                            Models</a>
+                        <div class="pub-meta">Seth Bernstein, Paul Denny, Juho Leinonen, Stephen MacNeil, et
+                            al.<br>ITiCSE 2024</div>
+                    </div>
+                    <div class="pub-card" data-year="2024"
+                        data-title="analyzing students' preferences for llm-generated analogies">
+                        <a class="pub-title" href="https://doi.org/10.1145/3649405.3659504" target="_blank">Analyzing
+                            Students' Preferences for LLM-Generated Analogies</a>
+                        <div class="pub-meta">Seth Bernstein, Paul Denny, Juho Leinonen, Stephen MacNeil, et
+                            al.<br>ITiCSE 2024</div>
+                    </div>
+                    <div class="pub-card" data-year="2022"
+                        data-title="generating diverse code explanations using the gpt-3 large language model">
+                        <a class="pub-title" href="https://doi.org/10.1145/3501709.3544280" target="_blank">Generating
+                            Diverse Code Explanations using the GPT-3 Large Language Model</a>
+                        <div class="pub-meta">Stephen MacNeil, Andrew Tran, Dan Mogil, Seth Bernstein, et
+                            al.<br>ICER
+                            2022</div>
+                    </div>
+                    <div class="pub-card" data-year="2023"
+                        data-title="comparing code explanations created by students and large language models">
+                        <a class="pub-title" href="https://doi.org/10.1145/3587102.3588785" target="_blank">Comparing
+                            Code Explanations Created by Students and Large Language Models</a>
+                        <div class="pub-meta">Juho Leinonen, Paul Denny, Stephen MacNeil, Sami Sarsa, Seth
+                            Bernstein, et
+                            al.<br>ITiCSE 2023</div>
+                    </div>
+                    <div class="pub-card" data-year="2023"
+                        data-title="the implications of large language models for cs teachers and students">
+                        <a class="pub-title" href="https://doi.org/10.1145/3545947.3573358" target="_blank">The
+                            Implications of Large Language Models for CS Teachers and Students</a>
+                        <div class="pub-meta">Stephen MacNeil, Joanne Kim, Juho Leinonen, Paul Denny, Seth
+                            Bernstein, et
+                            al.<br>SIGCSE 2023</div>
+                    </div>
+                    <div class="pub-card" data-year="2024"
+                        data-title="decoding logic errors: a comparative study on bug detection by students and large language models">
+                        <a class="pub-title" href="https://doi.org/10.1145/3636243.3636245" target="_blank">Decoding
+                            Logic Errors: A Comparative Study on Bug Detection by Students and Large
+                            Language
+                            Models</a>
+                        <div class="pub-meta">Stephen MacNeil, Paul Denny, Andrew Tran, Juho Leinonen, Seth
+                            Bernstein,
+                            et al.<br>ACE 2024</div>
+                    </div>
+                    <div class="pub-card" data-year="2023"
+                        data-title="experiences from using code explanations generated by large language models in a web software development e-book">
+                        <a class="pub-title" href="https://doi.org/10.1145/3545945.3569785" target="_blank">Experiences
+                            from Using Code Explanations Generated by Large Language Models in a Web
+                            Software
+                            Development E-Book</a>
+                        <div class="pub-meta">Stephen MacNeil, Andrew Tran, Arto Hellas, Joanne Kim, Sami
+                            Sarsa,
+                            Paul
+                            Denny, Seth Bernstein, et al.<br>SIGCSE 2023</div>
+                    </div>
+                    <div class="pub-card" data-year="2023"
+                        data-title="automatically generating cs learning materials with large language models">
+                        <a class="pub-title" href="https://doi.org/10.1145/3545947.3569630"
+                            target="_blank">Automatically Generating CS Learning Materials with Large
+                            Language
+                            Models</a>
+                        <div class="pub-meta">Stephen MacNeil, Andrew Tran, Juho Leinonen, Paul Denny,
+                            Joanne
+                            Kim,
+                            Arto
+                            Hellas, Seth Bernstein, et al.<br>SIGCSE 2023</div>
+                    </div>
+                    <div class="pub-card" data-year="2023"
+                        data-title="prompt middleware: mapping prompts for large language models to ui affordances">
+                        <a class="pub-title" href="https://arxiv.org/abs/2307.01142" target="_blank">Prompt
+                            middleware:
+                            Mapping prompts for large language models to UI affordances</a>
+                        <div class="pub-meta">Stephen MacNeil, Andrew Tran, Joanne Kim, Ziheng Huang, Seth
+                            Bernstein,
+                            Dan Mogil<br>arXiv 2023</div>
+                    </div>
+                </div>
+            </section>
+
+
+
+
+            <section id="service">
+                <h2>Service</h2>
+                <p>
+                    Most of my service work has been rooted in the Temple HCI Lab, where I took on a leadership role
+                    mentoring newer students, facilitating reading groups, and organizing collaborative workshops. I
+                    helped structure onboarding processes, provided feedback on projects, and worked closely with
+                    faculty to ensure that students felt supported and engaged. An important aspect was creating an
+                    environment where everyone
+                    could contribute meaningfully—regardless of prior experiences.
+                </p>
+                <p>
+                    Outside the lab, I served as President of Temple’s ACM chapter. I worked with a small team to host
+                    employer visits, technical workshops, student socials, and
+                    events designed to bring the department together. I wanted ACM to feel like a space where students
+                    could grow.
+                </p>
+                <p>
+                    I also directed OwlHacks, Temple’s annual hackathon, reviving the event after a two-year hiatus. We
+                    organized two hackathons in under a year, growing participation by over 100 students and ending with
+                    the largest hackathon in Temple’s history, with more than 250 attendees. I focused on building a
+                    beginner-friendly experience that encouraged collaboration and learning.
+                </p>
+                <p>
+                    I’ve also mentored undergraduate researchers through the NSF REU program. My focus there was on
+                    building a near-peer mentorship model where students felt comfortable asking questions and learning
+                    research practices. I aimed to reduce the power distance between faculty and students by fostering a
+                    supportive and conversational research environment.
+                </p>
+            </section>
+
+
+        </main>
+        <footer class="site-footer">
+            <p>© 2025 Seth Bernstein · <a href="mailto:sethbern@umich.edu">sethbern@umich.edu</a></p>
+        </footer>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

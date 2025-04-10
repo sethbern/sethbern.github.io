@@ -1,0 +1,212 @@
+body {
+    margin: 0;
+    font-family: Inter, sans-serif;
+    background-color: #fdfdfd;
+    color: #222
+}
+
+.wrapper {
+    max-width: 900px;
+    margin: auto;
+    padding: 40px 20px
+}
+
+.site-header {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px
+}
+
+.intro {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px
+}
+
+.profile-pic {
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #ccc
+}
+
+.intro-text h1 {
+    margin: 0;
+    font-size: 28px
+}
+
+.intro-text p {
+    margin: 5px 0
+}
+
+.social-links a {
+    text-decoration: none;
+    color: #004080;
+    margin-right: 0;
+    font-size: 14px
+}
+
+.social-links a:hover {
+    text-decoration: underline
+}
+
+main section {
+    margin-top: 40px
+}
+
+h2 {
+    font-size: 20px;
+    margin-bottom: 10px
+}
+
+.social-links .cv-link {
+    margin-left: 10px;
+    padding: 4px 8px;
+    border-radius: 4px;
+    background-color: #004080;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: none
+}
+
+.social-links .cv-link:hover {
+    background-color: #002f5f
+}
+
+#publications {
+    margin-top: 40px
+}
+
+.pub-card {
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ddd
+}
+
+.pub-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #004080;
+    text-decoration: none
+}
+
+.pub-title:hover {
+    text-decoration: underline
+}
+
+.pub-meta {
+    font-size: 14px;
+    margin-top: 4px;
+    color: #333
+}
+
+.sort-buttons {
+    margin-bottom: 15px;
+    font-size: 14px
+}
+
+.sort-buttons button {
+    background-color: #eee;
+    border: none;
+    padding: 5px 10px;
+    margin-left: 5px;
+    font-family: Inter, sans-serif;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: 500
+}
+
+.sort-buttons button:hover {
+    background-color: #ddd
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    background-color: #fdfdfd;
+    border-bottom: 1px solid #ddd;
+    z-index: 1000;
+    padding: 10px 20px
+}
+
+.nav-content {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 14px
+}
+
+.navbar a {
+    color: #004080;
+    text-decoration: none;
+    font-weight: 500
+}
+
+.navbar a:hover {
+    text-decoration: underline
+}
+
+.site-footer {
+    text-align: center;
+    font-size: 13px;
+    color: #666;
+    margin-top: 60px;
+    padding-top: 30px;
+    border-top: 1px solid #ddd
+}
+
+html {
+    scroll-behavior: smooth
+}
+
+section {
+    scroll-margin-top: 80px
+}
+
+.navbar {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .05)
+}
+
+.cv-link,
+.sort-buttons button {
+    transition: background-color .2s ease
+}
+
+.cv-link:active,
+.sort-buttons button:active {
+    transform: scale(.98)
+}
+
+h1 {
+    font-size: clamp(24px, 4vw, 32px)
+}
+
+h2 {
+    font-size: clamp(18px, 3vw, 24px)
+}
+
+body {
+    font-size: clamp(14px, 2.5vw, 16px)
+}
+
+.pub-title:hover {
+    color: #045bb2;
+    text-decoration: underline
+}
+
+@media (max-width:600px) {
+    .wrapper {
+        padding: 20px 15px
+    }
+}
+
+.navbar {
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .05)
+}
+
+.navbar a:active {
+    transform: scale(0.97);
+}
