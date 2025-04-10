@@ -60,20 +60,7 @@ h2 {
     margin-bottom: 10px
 }
 
-.social-links .cv-link {
-    margin-left: 10px;
-    padding: 4px 8px;
-    border-radius: 4px;
-    background-color: #004080;
-    color: #fff;
-    font-size: 13px;
-    font-weight: 500;
-    text-decoration: none
-}
 
-.social-links .cv-link:hover {
-    background-color: #002f5f
-}
 
 #publications {
     margin-top: 40px
