@@ -40,3 +40,42 @@ function updateSortLabels() {
         titleBtn.textContent += currentSort.asc ? ` ${upArrow}` : ` ${downArrow}`;
     }
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    const faders = document.querySelectorAll('.fade-in');
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.1
+    });
+
+    faders.forEach(el => observer.observe(el));
+});
+
+const navLinks = document.querySelectorAll(".navbar a[href^='#']");
+const sectionObserver = new IntersectionObserver(
+    (entries) => {
+        entries.forEach((entry) => {
+            const id = entry.target.getAttribute("id");
+            const link = document.querySelector(`.navbar a[href="#${id}"]`);
+            if (entry.isIntersecting) {
+                navLinks.forEach((lnk) => lnk.classList.remove("active"));
+                if (link) link.classList.add("active");
+            }
+        });
+    },
+    {
+        rootMargin: "-50% 0px -49% 0px", // center bias
+        threshold: 0,
+    }
+);
+
+document.querySelectorAll("section").forEach((section) => {
+    sectionObserver.observe(section);
+});

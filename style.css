@@ -112,38 +112,52 @@ h2 {
 .navbar {
     position: sticky;
     top: 0;
-    background-color: #fdfdfd;
-    border-bottom: 1px solid #ddd;
     z-index: 1000;
-    padding: 10px 20px
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
 }
 
 .nav-content {
     display: flex;
-    gap: 20px;
     justify-content: center;
+    gap: 24px;
     flex-wrap: wrap;
-    font-size: 14px
+    padding: 10px 20px;
+    font-size: 15px;
 }
 
 .navbar a {
     color: #004080;
+    font-weight: 500;
     text-decoration: none;
-    font-weight: 500
+    position: relative;
+    padding: 4px 2px;
+    transition: color 0.2s ease;
 }
 
-.navbar a:hover {
-    text-decoration: underline
+.navbar a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background-color: #004080;
+    transition: width 0.2s ease;
 }
 
-.site-footer {
-    text-align: center;
-    font-size: 13px;
-    color: #666;
-    margin-top: 60px;
-    padding-top: 30px;
-    border-top: 1px solid #ddd
+.navbar a:hover::after,
+.navbar a.active::after {
+    width: 100%;
 }
+
+.navbar a:hover,
+.navbar a.active {
+    color: #002f66;
+}
+
 
 html {
     scroll-behavior: smooth
@@ -196,4 +210,32 @@ body {
 
 .navbar a:active {
     transform: scale(0.97);
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.site-footer {
+    text-align: center;
+    font-size: 13px;
+    color: #666;
+    margin-top: 60px;
+    padding-top: 30px;
+    border-top: 1px solid #ddd
+}
+
+a {
+    color: #666;
+}
+
+header.site-header {
+    scroll-margin-top: 80px;
 }
