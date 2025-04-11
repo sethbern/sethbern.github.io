@@ -239,3 +239,7 @@ a {
 header.site-header {
     scroll-margin-top: 80px;
 }
+
+.blue {
+    color: #00274C;
+}
