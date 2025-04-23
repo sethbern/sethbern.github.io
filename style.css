@@ -42,7 +42,7 @@ body {
 
 .social-links a {
     text-decoration: none;
-    color: #004080;
+    color: #00274C;
     margin-right: 0;
     font-size: 14px
 }
@@ -75,7 +75,7 @@ h2 {
 .pub-title {
     font-size: 16px;
     font-weight: 600;
-    color: #004080;
+    color: #00274C;
     text-decoration: none
 }
 
@@ -122,14 +122,18 @@ h2 {
 .nav-content {
     display: flex;
     justify-content: center;
-    gap: 24px;
-    flex-wrap: wrap;
-    padding: 10px 20px;
-    font-size: 15px;
+    gap: 16px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 10px;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
 }
 
+
+
 .navbar a {
-    color: #004080;
+    color: #00274C;
     font-weight: 500;
     text-decoration: none;
     position: relative;
@@ -144,7 +148,7 @@ h2 {
     left: 0;
     height: 2px;
     width: 0;
-    background-color: #004080;
+    background-color: #00274C;
     transition: width 0.2s ease;
 }
 
@@ -227,9 +231,9 @@ body {
     text-align: center;
     font-size: 13px;
     color: #666;
-    margin-top: 60px;
+    /* margin-top: 60px;
     padding-top: 30px;
-    border-top: 1px solid #ddd
+    border-top: 1px solid #ddd */
 }
 
 a {
@@ -241,5 +245,22 @@ header.site-header {
 }
 
 .blue {
+    color: #00274C;
+    font-weight: bold;
+}
+
+h1 {
+    color: #00274C;
+}
+
+h2 {
+    color: #00274C;
+}
+
+h3 {
+    color: #00274C;
+}
+
+strong {
     color: #00274C;
 }
