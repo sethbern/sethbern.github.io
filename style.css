@@ -264,3 +264,44 @@ h3 {
 strong {
     color: #00274C;
 }
+
+.link-separator {
+    padding: 0 6px;
+    color: #002f66;
+}
+
+@media (max-width: 600px) {
+    .link-separator {
+        display: none;
+    }
+
+    .social-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 6px 10px;
+        text-align: center;
+        margin-top: 8px;
+    }
+
+    .social-links a {
+        display: inline-block;
+        font-size: 15px;
+        padding: 4px 2px;
+        white-space: nowrap;
+    }
+
+    .social-links i {
+        margin-right: 4px;
+    }
+}
+
+.mobile-break {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    .mobile-break {
+        display: inline;
+    }
+}
