@@ -71,7 +71,7 @@ const sectionObserver = new IntersectionObserver(
         });
     },
     {
-        rootMargin: "-50% 0px -49% 0px", // center bias
+        rootMargin: "-50% 0px -49% 0px", 
         threshold: 0,
     }
 );
