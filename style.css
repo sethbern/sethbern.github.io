@@ -306,3 +306,88 @@ strong {
     }
 }
 
+
+.pub-card.is-new { position: relative; }
+
+.pub-card { 
+    margin-bottom: 22px;       
+    padding: 14px 16px;      
+    border-bottom: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.pub-card.is-new {
+    padding-top: 28px;          
+    background: linear-gradient(to right, rgba(0,39,76,0.06), rgba(0,39,76,0.02) 60%);
+    border-bottom: 2px solid #00274C;  
+}
+
+.badge-new {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    background: #00274C;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 999px;
+    line-height: 1.5;
+    box-shadow: 0 1px 3px rgba(0,0,0,.12);
+    animation: none;    
+}
+
+.pub-title { 
+    line-height: 1.35; 
+    display: inline-block; 
+    margin: 0 0 6px 0;      
+}
+
+.pub-meta { 
+    line-height: 1.45; 
+}
+
+.sort-buttons { 
+    margin: 10px 0 18px; 
+}
+
+.announcement {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  background: rgba(0, 39, 76, 0.05);
+  border-left: 4px solid #00274C;
+  border-radius: 6px;
+  padding: 12px 16px;
+  margin: 32px 0;
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+.announcement i {
+  color: #00274C;
+  font-size: 18px;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.announcement-text em {
+  font-style: italic;
+  color: #00274C;
+}
+
+.announcement strong {
+  color: #00274C;
+}
+
+.announcement-text a {
+  color: #00274C;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0, 39, 76, 0.3);
+  transition: border-color 0.2s ease;
+}
+
+.announcement-text a:hover {
+  border-bottom-color: #00274C;
+}
