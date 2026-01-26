@@ -308,44 +308,14 @@ strong {
 
 
 .pub-card.is-new { position: relative; }
-
+/* 
 .pub-card { 
     margin-bottom: 22px;       
     padding: 14px 16px;      
     border-bottom: 1px solid #ddd;
     border-radius: 8px;
-}
+} */
 
-.pub-card.is-new {
-    padding-top: 28px;          
-    background: linear-gradient(to right, rgba(0,39,76,0.06), rgba(0,39,76,0.02) 60%);
-    border-bottom: 2px solid #00274C;  
-}
-
-.badge-new {
-    position: absolute;
-    top: 10px;
-    right: 12px;
-    background: #00274C;
-    color: #fff;
-    font-size: 11px;
-    font-weight: 700;
-    padding: 2px 8px;
-    border-radius: 999px;
-    line-height: 1.5;
-    box-shadow: 0 1px 3px rgba(0,0,0,.12);
-    animation: none;    
-}
-
-.pub-title { 
-    line-height: 1.35; 
-    display: inline-block; 
-    margin: 0 0 6px 0;      
-}
-
-.pub-meta { 
-    line-height: 1.45; 
-}
 
 .sort-buttons { 
     margin: 10px 0 18px; 
