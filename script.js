@@ -1,4 +1,16 @@
 let currentSort = { key: '', asc: true };
+let currentFilter = 'all';
+
+function filterPublications(type) {
+    currentFilter = type;
+    document.querySelectorAll('.pub-card').forEach(pub => {
+        const match = type === 'all' || pub.dataset.type === type;
+        pub.style.display = match ? '' : 'none';
+    });
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.getAttribute('onclick') === `filterPublications('${type}')`);
+    });
+}
 
 function sortPublications(key) {
     const container = document.getElementById('pub-container');
@@ -7,12 +19,12 @@ function sortPublications(key) {
     if (currentSort.key === key) {
         currentSort.asc = !currentSort.asc;
     } else {
-        currentSort = { key, asc: true };
+        currentSort = { key, asc: key !== 'year' };
     }
 
     pubs.sort((a, b) => {
-        const valA = a.dataset[key].toLowerCase();
-        const valB = b.dataset[key].toLowerCase();
+        const valA = key === 'year' ? Number(a.dataset[key]) : a.dataset[key].toLowerCase();
+        const valB = key === 'year' ? Number(b.dataset[key]) : b.dataset[key].toLowerCase();
 
         if (valA < valB) return currentSort.asc ? -1 : 1;
         if (valA > valB) return currentSort.asc ? 1 : -1;
@@ -42,6 +54,8 @@ function updateSortLabels() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+    sortPublications('year');
+
     const faders = document.querySelectorAll('.fade-in');
 
     const observer = new IntersectionObserver((entries) => {
