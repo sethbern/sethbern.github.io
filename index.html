@@ -14,8 +14,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Seth Bernstein</title>
-    <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=2" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <link rel="icon" href="/assets/favicon.ico" type="image/x-icon" />
 
@@ -54,7 +54,9 @@
                         <span class="link-separator">|</span>
                         <a href="https://orcid.org/0000-0002-7552-5448"><i class="fab fa-orcid"></i> ORCID</a>
                         <span class="link-separator">|</span>
-                        <a href="assets/Seth_Bernstein_CV_april-18-26.pdf"><i class="fa-regular fa-file-lines"></i> View
+                        <a href="https://github.com/sethbern" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
+                        <span class="link-separator">|</span>
+                        <a href="assets/Seth_Bernstein_CV_april-18-26.pdf" target="_blank" rel="noopener noreferrer"><i class="fa-regular fa-file-lines"></i> View
                             CV</a>
                     </div>
 
@@ -65,17 +67,14 @@
         </header>
 
         <main>
-            <div id="announcement" class="announcement fade-in">
+            <div id="announcement" class="announcement fade-in visible">
             <i class="fa-solid fa-bullhorn"></i>
             <div class="announcement-text">
                 <strong>Announcement:</strong><br>
-                Check out my recent paper 
-                <a href="https://dl.acm.org/doi/abs/10.1145/3769994.3770036" 
-                target="_blank" 
-                rel="noopener noreferrer">
-                <em>“Beyond the Benefits: A Systematic Review of the Harms and Consequences of Generative AI in Computing Education”</em>
-                </a> 
-                from <span class="blue">Koli Calling 2025</span>!
+                I'm honored to have received the
+                <a href="https://www.nsfgrfp.org/" target="_blank" rel="noopener noreferrer">
+                <em>NSF Graduate Research Fellowship (GRFP)</em></a>!
+                I'll be using this support to study whether connecting coursework to students' interests and lived experiences can improve learning.
             </div>
             </div>
             <section id="about" class="fade-in">
@@ -91,13 +90,8 @@
                     and learning
                     materials that reflect students' interests and backgrounds. I am passionate about making computing
                     more inclusive,
-                    especially for students who don’t yet see themselves represented in technical spaces.
-                </p>
-                <p>
-                    In the fall of 2025, I began my PhD at the <span class="blue">
-                        University of Michigan School of Information.
-                        Go blue!
-                    </span>
+                    especially for students who don’t yet see themselves represented in technical spaces. In the fall of 2025, I began my PhD at the <span class="blue">University of Michigan School of Information</span>,
+                    where I am advised by <a href="https://www.si.umich.edu/people/barbara-ericson" target="_blank" rel="noopener noreferrer">Dr. Barbara Ericson</a>. <span class="blue">Go blue!</span>
                 </p>
 
             </section>
@@ -110,6 +104,7 @@
                     explanations and analogies can be adapted to align with students’ interests, cultural backgrounds,
                     and learning
                     needs.
+                </p>
                 <p>
                     I combine LLMs with perspectives from HCI to better understand how to support intrinsic motivation
                     and deliver adaptive feedback.
@@ -125,104 +120,85 @@
 
             <section id="publications" class="fade-in">
                 <h2>Publications</h2>
-                <div class="sort-buttons">
-                    Sort by:
-                    <button id="sort-year" onclick="sortPublications('year')">Year</button>
-                    <button id="sort-title" onclick="sortPublications('title')" >Title</button>
+                <div class="controls">
+                    <span class="controls-label">Sort:</span>
+                    <button type="button" id="sort-year" onclick="sortPublications('year')">Year</button>
+                    <button type="button" id="sort-title" onclick="sortPublications('title')">Title</button>
+                    <span class="controls-divider"></span>
+                    <span class="controls-label">Filter:</span>
+                    <button type="button" class="filter-btn active" onclick="filterPublications('all')">All</button>
+                    <button type="button" class="filter-btn" onclick="filterPublications('conf')">Conference</button>
+                    <button type="button" class="filter-btn" onclick="filterPublications('poster')">Poster</button>
+                    <button type="button" class="filter-btn" onclick="filterPublications('workshop')">Workshop</button>
+                    <button type="button" class="filter-btn" onclick="filterPublications('bof')">BoF</button>
+                    <button type="button" class="filter-btn" onclick="filterPublications('preprint')">Preprint</button>
                 </div>
                 <div id="pub-container">
-                    <div class="pub-card" data-year="2025"
-                        data-title="Beyond the Benefits: A Systematic Review of the Harms and Consequences of Generative AI in Computing Education">
-
-                        <a class="pub-title" href="https://dl.acm.org/doi/10.1145/3769994.3770036" target="_blank">
-                            Beyond the Benefits: A Systematic Review of the Harms and Consequences of Generative AI in Computing Education
-                        </a>
-                        <div class="pub-meta"><b>Seth Bernstein</b>, Ashfin Rahman, Nadia Sharifi, Ariunjargal Terbish, Stephen MacNeil<br>Preprint: Koli Calling 2025</div>
+                    <div class="pub-card" data-year="2025" data-type="conf"
+                        data-title="beyond the benefits: a systematic review of the harms and consequences of generative ai in computing education">
+                        <h3 class="pub-title"><a href="https://dl.acm.org/doi/10.1145/3769994.3770036" target="_blank">Beyond the Benefits: A Systematic Review of the Harms and Consequences of Generative AI in Computing Education</a></h3>
+                        <p class="pub-authors"><b>Seth Bernstein</b>, Ashfin Rahman, Nadia Sharifi, Ariunjargal Terbish, Stephen MacNeil</p>
+                        <div class="pub-venue-row"><span class="pub-venue">Koli Calling 2025</span><span class="pub-tag pub-tag--conf">Conference</span></div>
                     </div>
-                    <div class="pub-card" data-year="2024"
+                    <div class="pub-card" data-year="2024" data-type="conf"
                         data-title="like a nesting doll: analyzing recursion analogies generated by cs students using large language models">
-                        <a class="pub-title" href="https://doi.org/10.1145/3649217.3653533" target="_blank">Like
-                            a
-                            Nesting Doll: Analyzing Recursion Analogies Generated by CS Students using Large
-                            Language
-                            Models</a>
-                        <div class="pub-meta"><b>Seth Bernstein</b>, Paul Denny, Juho Leinonen, Stephen MacNeil, et
-                            al.<br>ITiCSE 2024</div>
+                        <h3 class="pub-title"><a href="https://doi.org/10.1145/3649217.3653533" target="_blank">Like a Nesting Doll: Analyzing Recursion Analogies Generated by CS Students using Large Language Models</a></h3>
+                        <p class="pub-authors"><b>Seth Bernstein</b>, Paul Denny, Juho Leinonen, Stephen MacNeil, et al.</p>
+                        <div class="pub-venue-row"><span class="pub-venue">ITiCSE 2024</span><span class="pub-tag pub-tag--conf">Conference</span></div>
                     </div>
-
-                    <div class="pub-card" data-year="2024"
+                    <div class="pub-card" data-year="2024" data-type="poster"
                         data-title="analyzing students' preferences for llm-generated analogies">
-                        <a class="pub-title" href="https://doi.org/10.1145/3649405.3659504" target="_blank">Analyzing
-                            Students' Preferences for LLM-Generated Analogies</a>
-                        <div class="pub-meta"><b>Seth Bernstein</b>, Paul Denny, Juho Leinonen, Stephen MacNeil, et
-                            al.<br>ITiCSE 2024</div>
+                        <h3 class="pub-title"><a href="https://doi.org/10.1145/3649405.3659504" target="_blank">Analyzing Students' Preferences for LLM-Generated Analogies</a></h3>
+                        <p class="pub-authors"><b>Seth Bernstein</b>, Paul Denny, Juho Leinonen, Stephen MacNeil, et al.</p>
+                        <div class="pub-venue-row"><span class="pub-venue">ITiCSE 2024</span><span class="pub-tag pub-tag--poster">Poster</span></div>
                     </div>
-                    <div class="pub-card" data-year="2026"
+                    <div class="pub-card" data-year="2026" data-type="poster"
                         data-title="assessing the role of diversity in llm explanations for enhancing student understanding">
-                        <a class="pub-title" href="https://doi.org/10.1145/3770761.3777320" target="_blank">Assessing the Role of Diversity in LLM Explanations for Enhancing Student Understanding</a>
-                        <div class="pub-meta">Kush Patel, <b>Seth Bernstein</b>, Rayhona Nasimova, Paul Denny, Juho Leinonen, Stephen MacNeil<br>SIGCSE TS 2026</div>
+                        <h3 class="pub-title"><a href="https://doi.org/10.1145/3770761.3777320" target="_blank">Assessing the Role of Diversity in LLM Explanations for Enhancing Student Understanding</a></h3>
+                        <p class="pub-authors">Kush Patel, <b>Seth Bernstein</b>, Rayhona Nasimova, Paul Denny, Juho Leinonen, Stephen MacNeil</p>
+                        <div class="pub-venue-row"><span class="pub-venue">SIGCSE TS 2026</span><span class="pub-tag pub-tag--poster">Poster</span></div>
                     </div>
-                    <div class="pub-card" data-year="2022"
+                    <div class="pub-card" data-year="2022" data-type="poster"
                         data-title="generating diverse code explanations using the gpt-3 large language model">
-                        <a class="pub-title" href="https://doi.org/10.1145/3501709.3544280" target="_blank">Generating
-                            Diverse Code Explanations using the GPT-3 Large Language Model</a>
-                        <div class="pub-meta">Stephen MacNeil, Andrew Tran, Dan Mogil, <b>Seth Bernstein</b>, et
-                            al.<br>ICER
-                            2022</div>
+                        <h3 class="pub-title"><a href="https://doi.org/10.1145/3501709.3544280" target="_blank">Generating Diverse Code Explanations using the GPT-3 Large Language Model</a></h3>
+                        <p class="pub-authors">Stephen MacNeil, Andrew Tran, Dan Mogil, <b>Seth Bernstein</b>, et al.</p>
+                        <div class="pub-venue-row"><span class="pub-venue">ICER 2022</span><span class="pub-tag pub-tag--poster">Poster</span></div>
                     </div>
-                    <div class="pub-card" data-year="2023"
+                    <div class="pub-card" data-year="2023" data-type="conf"
                         data-title="comparing code explanations created by students and large language models">
-                        <a class="pub-title" href="https://doi.org/10.1145/3587102.3588785" target="_blank">Comparing
-                            Code Explanations Created by Students and Large Language Models</a>
-                        <div class="pub-meta">Juho Leinonen, Paul Denny, Stephen MacNeil, Sami Sarsa, <b>Seth Bernstein</b>, et
-                            al.<br>ITiCSE 2023</div>
+                        <h3 class="pub-title"><a href="https://doi.org/10.1145/3587102.3588785" target="_blank">Comparing Code Explanations Created by Students and Large Language Models</a></h3>
+                        <p class="pub-authors">Juho Leinonen, Paul Denny, Stephen MacNeil, Sami Sarsa, <b>Seth Bernstein</b>, et al.</p>
+                        <div class="pub-venue-row"><span class="pub-venue">ITiCSE 2023</span><span class="pub-tag pub-tag--conf">Conference</span></div>
                     </div>
-                    <div class="pub-card" data-year="2023"
+                    <div class="pub-card" data-year="2023" data-type="bof"
                         data-title="the implications of large language models for cs teachers and students">
-                        <a class="pub-title" href="https://doi.org/10.1145/3545947.3573358" target="_blank">The
-                            Implications of Large Language Models for CS Teachers and Students</a>
-                        <div class="pub-meta">Stephen MacNeil, Joanne Kim, Juho Leinonen, Paul Denny, <b>Seth Bernstein</b>, et
-                            al.<br>SIGCSE 2023</div>
+                        <h3 class="pub-title"><a href="https://doi.org/10.1145/3545947.3573358" target="_blank">The Implications of Large Language Models for CS Teachers and Students</a></h3>
+                        <p class="pub-authors">Stephen MacNeil, Joanne Kim, Juho Leinonen, Paul Denny, <b>Seth Bernstein</b>, et al.</p>
+                        <div class="pub-venue-row"><span class="pub-venue">SIGCSE 2023</span><span class="pub-tag pub-tag--bof">BoF</span></div>
                     </div>
-                    <div class="pub-card" data-year="2024"
+                    <div class="pub-card" data-year="2024" data-type="conf"
                         data-title="decoding logic errors: a comparative study on bug detection by students and large language models">
-                        <a class="pub-title" href="https://doi.org/10.1145/3636243.3636245" target="_blank">Decoding
-                            Logic Errors: A Comparative Study on Bug Detection by Students and Large
-                            Language
-                            Models</a>
-                        <div class="pub-meta">Stephen MacNeil, Paul Denny, Andrew Tran, Juho Leinonen, <b>Seth Bernstein</b>,
-                            et al.<br>ACE 2024</div>
+                        <h3 class="pub-title"><a href="https://doi.org/10.1145/3636243.3636245" target="_blank">Decoding Logic Errors: A Comparative Study on Bug Detection by Students and Large Language Models</a></h3>
+                        <p class="pub-authors">Stephen MacNeil, Paul Denny, Andrew Tran, Juho Leinonen, <b>Seth Bernstein</b>, et al.</p>
+                        <div class="pub-venue-row"><span class="pub-venue">ACE 2024</span><span class="pub-tag pub-tag--conf">Conference</span></div>
                     </div>
-                    <div class="pub-card" data-year="2023"
+                    <div class="pub-card" data-year="2023" data-type="conf"
                         data-title="experiences from using code explanations generated by large language models in a web software development e-book">
-                        <a class="pub-title" href="https://doi.org/10.1145/3545945.3569785" target="_blank">Experiences
-                            from Using Code Explanations Generated by Large Language Models in a Web
-                            Software
-                            Development E-Book</a>
-                        <div class="pub-meta">Stephen MacNeil, Andrew Tran, Arto Hellas, Joanne Kim, Sami
-                            Sarsa,
-                            Paul
-                            Denny, <b>Seth Bernstein</b>, et al.<br>SIGCSE 2023</div>
+                        <h3 class="pub-title"><a href="https://doi.org/10.1145/3545945.3569785" target="_blank">Experiences from Using Code Explanations Generated by Large Language Models in a Web Software Development E-Book</a></h3>
+                        <p class="pub-authors">Stephen MacNeil, Andrew Tran, Arto Hellas, Joanne Kim, Sami Sarsa, Paul Denny, <b>Seth Bernstein</b>, et al.</p>
+                        <div class="pub-venue-row"><span class="pub-venue">SIGCSE 2023</span><span class="pub-tag pub-tag--conf">Conference</span></div>
                     </div>
-                    <div class="pub-card" data-year="2023"
+                    <div class="pub-card" data-year="2023" data-type="workshop"
                         data-title="automatically generating cs learning materials with large language models">
-                        <a class="pub-title" href="https://doi.org/10.1145/3545947.3569630"
-                            target="_blank">Automatically Generating CS Learning Materials with Large
-                            Language
-                            Models</a>
-                        <div class="pub-meta">Stephen MacNeil, Andrew Tran, Juho Leinonen, Paul Denny,
-                            Joanne
-                            Kim,
-                            Arto
-                            Hellas, <b>Seth Bernstein</b>, et al.<br>SIGCSE 2023</div>
+                        <h3 class="pub-title"><a href="https://doi.org/10.1145/3545947.3569630" target="_blank">Automatically Generating CS Learning Materials with Large Language Models</a></h3>
+                        <p class="pub-authors">Stephen MacNeil, Andrew Tran, Juho Leinonen, Paul Denny, Joanne Kim, Arto Hellas, <b>Seth Bernstein</b>, et al.</p>
+                        <div class="pub-venue-row"><span class="pub-venue">SIGCSE 2023</span><span class="pub-tag pub-tag--workshop">Workshop</span></div>
                     </div>
-                    <div class="pub-card" data-year="2023"
+                    <div class="pub-card" data-year="2023" data-type="preprint"
                         data-title="prompt middleware: mapping prompts for large language models to ui affordances">
-                        <a class="pub-title" href="https://arxiv.org/abs/2307.01142" target="_blank">Prompt
-                            middleware:
-                            Mapping prompts for large language models to UI affordances</a>
-                        <div class="pub-meta">Stephen MacNeil, Andrew Tran, Joanne Kim, Ziheng Huang, <b>Seth Bernstein</b>,
-                            Dan Mogil<br>arXiv 2023</div>
+                        <h3 class="pub-title"><a href="https://arxiv.org/abs/2307.01142" target="_blank">Prompt Middleware: Mapping Prompts for Large Language Models to UI Affordances</a></h3>
+                        <p class="pub-authors">Stephen MacNeil, Andrew Tran, Joanne Kim, Ziheng Huang, <b>Seth Bernstein</b>, Dan Mogil</p>
+                        <div class="pub-venue-row"><span class="pub-venue">arXiv 2023</span><span class="pub-tag pub-tag--preprint">Preprint</span></div>
                     </div>
                 </div>
             </section>
@@ -259,7 +235,7 @@
 
         </main>
         <footer class="site-footer">
-            <p>© 2025 Seth Bernstein · <a href="mailto:sethbern@umich.edu">sethbern@umich.edu</a></p>
+            <p>© 2026 Seth Bernstein · <a href="mailto:sethbern@umich.edu">sethbern@umich.edu</a></p>
         </footer>
 
     </div>
