@@ -473,3 +473,19 @@ strong {
 .pub-tag--bof     { background: #ece1f3; color: #5c2d8a; }
 .pub-tag--workshop{ background: #d9ebe0; color: #1f5f3f; }
 .pub-tag--preprint{ background: #f0f0f0; color: #555; }
+
+.pub-note {
+    margin-top: -0.4rem;
+    margin-bottom: 1.5rem;
+    color: #666;
+    font-size: 0.95rem;
+}
+
+.pub-note a {
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.pub-note a:hover {
+    text-decoration: underline;
+}
