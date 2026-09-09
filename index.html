@@ -68,16 +68,17 @@
 
         <main>
             <div id="announcement" class="announcement fade-in visible">
-            <i class="fa-solid fa-bullhorn"></i>
-            <div class="announcement-text">
-                <strong>Announcement:</strong><br>
-                I’m excited to share that my paper, <strong><em>Exploring the Value of Diverse LLM Explanations in Introductory Programming</em></strong>, has been accepted to <em>SIGCSE Virtual 2026</em> Conference.
-                <a href="https://www.researchgate.net/publication/408236481_Exploring_the_Value_of_Diverse_LLM_Explanations_in_Introductory_Programming"
-                target="_blank"
-                rel="noopener noreferrer">
-                Read the preprint.
-                </a>
-            </div>
+                <i class="fa-solid fa-bullhorn"></i>
+                <div class="announcement-text">
+                    <strong>Announcement:</strong><br>
+                    I'm excited to share that my paper, <strong><em>Flawed but Memorable: Student Critical Reception of Interest-Personalized GenAI Analogies in Computing Education</em></strong>, has been accepted to <em>Koli Calling 2026</em>.
+
+                    <a href="https://arxiv.org/abs/2609.06095"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    Read the paper.
+                    </a>
+                </div>
             </div>
             <section id="about" class="fade-in">
                 <h2>About</h2>
@@ -122,7 +123,11 @@
 
             <section id="publications" class="fade-in">
                 <h2>Publications</h2>
-                <div class="controls">
+                <p class="pub-note">
+                    See my <a href="https://scholar.google.com/citations?user=mpn42u8AAAAJ" target="_blank" rel="noopener noreferrer">
+                        Google Scholar
+                    </a> for a complete publication list.
+                </p>                <div class="controls">
                     <span class="controls-label">Sort:</span>
                     <button type="button" id="sort-year" onclick="sortPublications('year')">Year</button>
                     <button type="button" id="sort-title" onclick="sortPublications('title')">Title</button>
@@ -135,7 +140,13 @@
                     <button type="button" class="filter-btn" onclick="filterPublications('bof')">BoF</button>
                     <button type="button" class="filter-btn" onclick="filterPublications('preprint')">Preprint</button>
                 </div>
-                <div id="pub-container">
+                <div id="pub-container"> 
+                    <div class="pub-card" data-year="2026" data-type="conf"
+                        data-title="exploring the value of diverse llm explanations in introductory programming">
+                        <h3 class="pub-title"><a href="https://doi.org/10.1145/3795867.3830995" target="_blank">Exploring the Value of Diverse LLM Explanations in Introductory Programming</a></h3>
+                        <p class="pub-authors"><b>Seth Bernstein</b>, Paul Denny, Juho Leinonen, Kush Patel, Rayhona Nasimova, Matt Littlefield, Stephen MacNeil</p>
+                        <div class="pub-venue-row"><span class="pub-venue">SIGCSE Virtual 2026</span><span class="pub-tag pub-tag--conf">Conference</span></div>
+                    </div>
                     <div class="pub-card" data-year="2025" data-type="conf"
                         data-title="beyond the benefits: a systematic review of the harms and consequences of generative ai in computing education">
                         <h3 class="pub-title"><a href="https://dl.acm.org/doi/10.1145/3769994.3770036" target="_blank">Beyond the Benefits: A Systematic Review of the Harms and Consequences of Generative AI in Computing Education</a></h3>
